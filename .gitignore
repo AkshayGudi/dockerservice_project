@@ -3,5 +3,6 @@ db.sqlite3
 dockerservice_application/__pycache__/
 dockerservice_application/migrations/
 dockerservice_application/services/__pycache__/
+dockerservice_application/tests/__pycache__/
 dockerservice_project/__pycache__/
 

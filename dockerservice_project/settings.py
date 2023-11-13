@@ -137,7 +137,8 @@ Q_CLUSTER = {
     'name': 'DjangoQ',
     'workers': 4,
     'recycle': 500,
-    'timeout': 60,
+    'timeout': 600,
+    'retry':700,
     'compress': True,
     'save_limit': 250,
     'queue_limit': 500,
@@ -148,5 +149,24 @@ Q_CLUSTER = {
         'db': 0,
         'password': '',
         'socket_timeout': 3,
+    },
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
     },
 }
