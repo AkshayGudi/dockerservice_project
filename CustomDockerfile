@@ -1,0 +1,6 @@
+FROM busybox:latest
+
+# Adding the print statement to the container
+CMD echo "hello"
+
+CMD ["sh"]

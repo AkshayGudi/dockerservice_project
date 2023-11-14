@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6=$ifd(m3)bx8y=2coj2@j5y85rb&=z9xkgz7^i#e-48in5)o1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'dockerservice_application.apps.DockerserviceApplicationConfig',
-    'django_q'
+    'django_q',
+    'dockerservice_application.apps.DockerserviceApplicationConfig'
 ]
 
 MIDDLEWARE = [
